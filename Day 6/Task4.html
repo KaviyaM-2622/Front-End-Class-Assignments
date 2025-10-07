@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+</head>
+<body>
+    <!--<label> Describes what the input field is for.Helps screen readers read the form correctly.
+        When you click the label text, it focuses the input box.
+        The for attribute of <label> must be equal to the id attribute of the related element to bind them together. 
+        A label can also be bound to an element by placing the element inside the <label> <element-->
+
+    <!--The placeholder attribute specifies a short hint that describes the expected value of an input field (e.g. a sample value or a short description of the expected format).
+    The short hint is displayed in the input field before the user enters a value.
+    The placeholder attribute works with the following input types: text, search, url, number, tel, email, and password-->
+
+
+    <h2>User Login</h2>
+
+    <form action="login.php" method="post">
+
+    <label for="name">Name:</label><br>
+    <input type="name" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+    <input type="submit" value="Login">
+
+  </form>
+
+</body>
+</html>

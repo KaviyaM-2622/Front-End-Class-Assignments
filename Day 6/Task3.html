@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+</head>
+<body>
+    
+  <h2>User Information Form</h2>
+
+  <form action="submit_information.php" method="post">
+
+    <!-- Multiple choices using checkboxes -->
+    <h3>Select Your Favorite Food:</h3>
+    <input type="checkbox" id="idli" name="favorite food" value="Idli">
+    <label for="idli">Idli</label><br>
+
+    <input type="checkbox" id="dosa" name="favoritr food" value="Dosa">
+    <label for="dosa">Dosa</label><br>
+
+    <input type="checkbox" id="curd rice" name="favorite food" value="Curd Rice">
+    <label for="curd rice">Curd Rice</label><br>
+
+    <input type="checkbox" id="puri" name="favorite food" value="Puri">
+    <label for="puri">Puri</label><br>
+
+    <input type="checkbox" name="sambar rice" id="favorite food" value="Sambar Rice">
+    <label for="sambar rice">Sambar Rice</label><br>
+
+
+    <!-- Single choice using radio buttons -->
+    <h3>Choose Your Gender:</h3>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label><br>
+
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br>
+
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label><br>
+
+    <!-- Numeric input -->
+    <h3>Enter Your Age:</h3>
+    <input type="number" id="age" name="age" placeholder="Enter your age"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
+
