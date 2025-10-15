@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Header</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky; 
+      top: 0;           
+      background-color: #d05fa7;
+      color: rgb(107, 148, 231);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 20px;
+      z-index: 1000;   
+    }
+
+    .content {
+      height: 2000px; 
+      padding: 20px;
+      background: linear-gradient(to bottom, #63a699, #daa6a6);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Sticky Header
+  </header>
+
+  <div class="content">
+  </div>
+
+</body>
+</html>

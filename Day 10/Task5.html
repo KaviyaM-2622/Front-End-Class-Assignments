@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Positioning Example</title>
+  <style>
+    
+    .box {
+      width: 100px;
+      height: 100px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    .relative-box {
+      background-color: #09ee59;
+      position: relative;
+      top: 20px;   
+      left: 20px;  
+    }
+
+    .absolute-box {
+      background-color: #5944f4;
+      position: absolute;
+      top: 50px;   
+      right: 100px; 
+    }
+
+    .fixed-box {
+      background-color: #860808;
+      position: fixed;
+      bottom: 20px; 
+      right: 20px;  
+    }
+  </style>
+</head>
+<body>
+  <div class="box relative-box">Relative</div>
+  <div class="box absolute-box">Absolute</div>
+  <div class="box fixed-box">Fixed</div>
+</body>
+</html>
