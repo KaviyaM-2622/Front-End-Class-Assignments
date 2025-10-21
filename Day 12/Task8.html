@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav main"
+                "nav aside"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 70px 1fr 1fr 60px;
+            height: 100vh;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #80b7de;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #d59a9a;
+            padding: 15px;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #c2c2ee;
+            padding: 15px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #998080;
+            padding: 15px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav,
+        aside,
+        main {
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>
+            <p>Navigation Item 1</p>
+            <p>Navigation Item 2</p>
+            <p>Navigation Item 3</p>
+        </nav>
+        <main>
+            <h2>Main Content</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        </main>
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

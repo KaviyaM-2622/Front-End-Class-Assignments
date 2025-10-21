@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive 3 Column Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(108, 210, 108);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 300px;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Responsive 3 Column Layout</h1>
+
+    <div class="container">
+        <div class="box">
+            <h2>Column 1</h2>
+            <p>This is the first column.</p>
+        </div>
+        <div class="box">
+            <h2>Column 2</h2>
+            <p>This is the second column.</p>
+        </div>
+        <div class="box">
+            <h2>Column 3</h2>
+            <p>This is the third column.</p>
+        </div>
+    </div>
+
+</body>
+</html>

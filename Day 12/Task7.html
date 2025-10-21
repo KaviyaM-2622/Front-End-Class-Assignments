@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: burlywood;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 15px;
+    }
+
+    .product-card {
+      background-color: rgb(233, 137, 137);
+      border: 1px solid #9d8b8b;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .product-card h2 {
+      font-size: 16px;
+      margin: 10px ;
+    }
+
+    .product-card p {
+      margin: 0;
+      color: #ce1313;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Electronic Products</h1>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <h2>Smartphone</h2>
+      <p>₹399</p>
+    </div>
+
+    <div class="product-card">
+      <h2>Laptop</h2>
+      <p>₹799</p>
+    </div>
+
+    <div class="product-card">
+      <h2>Headphones</h2>
+      <p>₹59</p>
+    </div>
+
+    <div class="product-card">
+      <h2>Smart Watch</h2>
+      <p>₹199</p>
+    </div>
+
+    <div class="product-card">
+      <h2>Tablet</h2>
+      <p>₹299</p>
+    </div>
+
+    <div class="product-card">
+      <h2>Camera</h2>
+      <p>₹499</p>
+    </div>
+  </div>
+
+</body>
+</html>

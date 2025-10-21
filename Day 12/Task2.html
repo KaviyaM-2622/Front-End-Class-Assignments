@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Float Image Beside Text</title>
+<style>
+  .container {
+    border: 5px double #2d2929;
+    padding: 15px;
+    margin: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .float-left {
+    float: left;
+    margin-right: 15px;
+  }
+
+  .clearfix::after {
+    content: "";
+    display:table;
+    clear: both;
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container clearfix">
+  <img src="https://25.media.tumblr.com/tumblr_m6c7qouObw1qbsg6oo1_1280.jpg" 
+       alt="Beautiful Beach" class="float-left">
+  <h2>Relaxing at the Beach</h2>
+  <p>
+    The beach is a perfect place to relax and enjoy nature. The sound of waves,
+    the smell of the sea breeze, and the soft sand under your feet make it a
+    peaceful and refreshing experience.
+  </p>
+  <p>
+    Whether you're swimming, building sandcastles, or watching the sunset, the
+    beach offers something for everyone to enjoy.
+  </p>
+</div>
+
+</body>
+</html>
