@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Section - Forest</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      width: 100vw;
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 6vw;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 2.2vw;
+      max-width: 60vw;
+    }
+
+    .button {
+      margin-top: 2vh;
+      padding: 1vw 2vw;
+      font-size: 1.5vw;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+      cursor:pointer;
+    }
+
+    .button:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 9vw;
+      }
+
+      .hero p {
+        font-size: 4vw;
+      }
+
+      .button {
+        font-size: 3.5vw;
+        padding: 2vw 4vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the Forest</h1>
+      <p>Experience the calm and mystery of nature like never before.</p>
+      <button class="button">Explore Now</button>
+    </div>
+  </section>
+</body>
+
+</html>

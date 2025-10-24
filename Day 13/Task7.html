@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: rgb(150, 237, 107);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background-color: rgb(239, 101, 101);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Grid (4 → 2 → 1)</h1>
+
+    <div class="product-grid">
+        <div class="product">
+            <h2>Product 1</h2>
+            <p>Price: ₹1000</p>
+        </div>
+
+        <div class="product">
+            <h2>Product 2</h2>
+            <p>Price: ₹2000</p>
+        </div>
+
+        <div class="product">
+            <h2>Product 3</h2>
+            <p>Price: ₹3000</p>
+        </div>
+
+        <div class="product">
+            <h2>Product 4</h2>
+            <p>Price: ₹4000</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em and rem</title>
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            background-color: rgb(223, 220, 242);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .rem-box {
+            font-size: 1rem;
+            border: 2px solid rgb(54, 5, 233);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+
+        .rem-box p {
+            font-size: 1.5rem;
+            color: rgb(215, 82, 11);
+        }
+
+        .em-box {
+            font-size: 1em;
+            border: 2px solid rgb(98, 7, 234);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+
+        .em-box p {
+            font-size: 1.5em;
+            color: rgb(251, 3, 172);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Compare em and rem Units</h1>
+
+  <div class="rem-box">
+    <strong>Using rem units</strong>
+    <p>This text is 1.5rem</p>
+  </div>
+
+  <div class="em-box">
+    <strong>Using em units</strong>
+    <p>This text is 1.5em</p>
+  </div>
+</body>
+</html>

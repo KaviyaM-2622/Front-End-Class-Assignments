@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two column layout</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: cadetblue;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .column {
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+
+        @media (max-width: 600px){
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Two-column layout</h1>
+
+    <div class="container">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+
+        <div class="column">
+        <h2>Column 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+       </div>
+    </div>
+</body>
+</html>
