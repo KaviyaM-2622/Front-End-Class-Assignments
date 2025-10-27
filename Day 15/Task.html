@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Boutique</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: rgb(69, 66, 66);
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgb(45, 42, 42);
+            color: white;
+            padding: 18px 10%;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: rgb(239, 22, 170);
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: rgb(239, 22, 170);
+        }
+
+        .hero {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero img.bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: rgb(239, 22, 170);
+            padding: 12px 26px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: rgb(227, 44, 209);
+        }
+
+        .products {
+            text-align: center;
+            padding: 60px 10%;
+            background: #f9fafb;
+        }
+
+        .products h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .filter {
+            margin-bottom: 30px;
+        }
+
+        .filter input {
+            display: none;
+        }
+
+        .filter label {
+            background: white;
+            color: black;
+            padding: 8px 18px;
+            margin: 6px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .filter label:hover {
+            background: rgb(239, 22, 170);
+            color: white;
+        }
+
+        .filter input:checked+label {
+            background: rgb(239, 22, 170);
+            color: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 12px 0 4px;
+            color: rgb(19, 19, 42);
+        }
+
+        .card p {
+            margin-bottom: 14px;
+            color: rgb(239, 22, 170);
+            font-weight: 600;
+        }
+
+        .about {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .contact {
+            background: #f9fafb;
+            text-align: center;
+            padding: 60px 10%;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            color: rgb(43, 41, 41);
+            margin-bottom: 6px;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Fashion<span>World</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section id="home" class="hero">
+        <img src="dress shop.jpg" alt="Fashion background" class="bg-img">
+        <div>
+            <h1>New Season, New Style</h1>
+            <p>Discover fashion that fits your lifestyle — fresh looks for everyone.</p>
+            <a href="#shop" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="shop" class="products">
+        <h2>Our Collections</h2>
+
+        <div class="filter">
+            <input type="radio" name="category" id="all" checked>
+            <label for="all">All</label>
+
+            <input type="radio" name="category" id="men">
+            <label for="men">Men</label>
+
+            <input type="radio" name="category" id="women">
+            <label for="women">Women</label>
+
+            <input type="radio" name="category" id="kids">
+            <label for="kids">Kids</label>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="card men">
+                <h3>Casual Shirt</h3>
+                <p>₹999</p>
+            </div>
+            <div class="card men">
+                <h3>Sweatshirt & Hoodies</h3>
+                <p>₹899</p>
+            </div>
+            <div class="card men">
+                <h3>T-shirts & Trousers</h3>
+                <p>₹699</p>
+            </div>
+            <div class="card men">
+                <h3>Sports</h3>
+                <p>₹799</p>
+            </div>
+
+            <div class="card women">
+                <h3>Kurtis</h3>
+                <p>₹1199</p>
+            </div>
+            <div class="card women">
+                <h3>Sarees</h3>
+                <p>₹2499</p>
+            </div>
+
+            <div class="card kids">
+                <h3>Frocks</h3>
+                <p>₹599</p>
+            </div>
+            <div class="card kids">
+                <h3>Skirts</h3>
+                <p>₹499</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+            Welcome to Fashion World — where elegance meets comfort.
+            We curate stylish and sustainable collections for men, women, and kids.
+            Every outfit tells a story — let yours shine through our designs.
+        </p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: hello@fashionworld.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: 111, Fashion Street, Chennai, India</p>
+    </section>
+
+    <footer>
+        <p>&copy 2025 Fashion World. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
