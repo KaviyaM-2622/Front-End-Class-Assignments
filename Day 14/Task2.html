@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Text</title>
+    <style>
+        body {
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            position: relative;
+            font-size: 3rem;
+            color: rgb(38, 40, 39);
+            animation: textmove 5s linear infinite;
+            cursor: pointer;
+        }
+        @keyframes textmove {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+        h1:hover {
+            animation-play-state: paused;
+            color: blue;
+        }
+        @media (max-width: 500px)
+        {
+            h1 {
+                font-size: 1 rem;
+                animation-duration: 6s;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Moving Text Animation</h1>
+</body>
+</html>

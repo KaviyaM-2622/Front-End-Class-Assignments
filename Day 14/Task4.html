@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Square Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(91, 85, 85);
+            margin: 0;
+        }
+
+        .square {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            border: 4px dotted black;
+            box-shadow: 0 8px 20px rgb(8, 251, 93);
+            border-radius: 12px;
+            animation: rotateSquare 3s linear infinite;
+        }
+
+        @keyframes rotateSquare {
+            10% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .square:hover {
+            animation-duration: 1.5s;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .square {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+</body>
+</html>

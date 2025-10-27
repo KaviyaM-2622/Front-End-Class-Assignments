@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Progress Bar</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgb(250, 245, 245);
+            font-family: 'Times New Roman', Times, serif;
+        
+        }
+        h1 {
+           margin-bottom: 25px;
+           color: black;
+        }
+
+        .progress-container {
+            width: 80%;
+            max-width: 500px;
+            height: 30px;
+            background: #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #0f79fb, #34cafc);
+            border-radius: 15px 0 0 15px;
+            animation: fillBar 10s ease-in-out forwards;
+        }
+
+        @keyframes fillBar {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Loading.....</h1>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+</body>
+</html>

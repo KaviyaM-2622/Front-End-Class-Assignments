@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Button Hover & Focus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: rgb(96, 96, 211);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition:
+                background-color 0.4s ease,
+                box-shadow 0.5s ease,
+                transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: rgb(117, 117, 232);
+            box-shadow: 0 6px 15px blue;
+            transform: translateY(-3px);
+        }
+
+        .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn">Click Me</button>
+
+</body>
+
+</html>
