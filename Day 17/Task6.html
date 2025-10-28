@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students Info</title>
+</head>
+
+<body>
+  <h2>Student Information</h2>
+
+  <form>
+    <label>Name:</label>
+    <input type="text" id="name" value="Kaviya"><br><br>
+
+    <label>Age:</label>
+    <input type="number" id="age" value="24"><br><br>
+
+    <label>Course:</label>
+    <input type="text" id="course" value="Frontend"><br><br>
+
+    <label>Enrolled:</label>
+    <input type="checkbox" id="enrolled" checked><br><br>
+
+    <button type="button">Submit</button>
+  </form>
+
+  <p id="info"></p>
+
+  <script>
+    function showDetails() {
+      let studentName = document.getElementById("name").value;
+      let age = document.getElementById("age").value;
+      let course = document.getElementById("course").value;
+      let isEnrolled = document.getElementById("enrolled").checked;
+
+      document.getElementById("info").innerHTML =
+        "<strong>Name:</strong> " + studentName + "<br>" +
+        "<strong>Age:</strong> " + age + "<br>" +
+        "<strong>Course:</strong> " + course + "<br>" +
+        "<strong>Enrolled:</strong> " + isEnrolled;
+    }
+    </script>
