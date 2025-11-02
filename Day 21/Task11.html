@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaviya M | Portfolio</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(22, 22, 22);
+            background-color: rgb(182, 218, 227);
+            text-align: center;
+        }
+
+        header {
+            background: rgb(120, 156, 229);
+            padding: 1rem;
+            color: rgb(17, 17, 18);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 0.5rem;
+        }
+
+        section {
+            margin: 1rem auto;
+            width: 80%;
+        }
+
+        footer {
+            background: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Kaviya M</h1>
+        <p>Frontend Developer | B.Tech CSE Graduate</p>
+    </header>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul id="skillList"></ul>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <ul id="projectList"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kaviya M | All Rights Reserved</p>
+    </footer>
+
+    <script>
+    
+        const skills = ["HTML", "CSS", "JavaScript", "React", "SQL"];
+        const skillList = document.getElementById("skillList");
+        skills.forEach(skill => {
+            const li = document.createElement("li");
+            li.textContent = skill;
+            skillList.appendChild(li);
+        });
+
+        const projects = [
+            {
+                title: "Heart Rate and Body Temperature Monitoring System using IoT",
+                description: "A health monitoring system that tracks patient vitals remotely using IoT sensors."
+            },
+            {
+                title: "Health Care System using Fingerprint",
+                description: "A secure system for managing health records based on fingerprint authentication."
+            }
+        ];
+
+        const projectList = document.getElementById("projectList");
+        projects.forEach(project => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${project.title}</strong> — ${project.description}`;
+            projectList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
