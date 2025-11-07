@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaviya M | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(22, 22, 22);
+            background-color: rgb(182, 218, 227);
+            transition: background-color 0.3s;
+        }
+
+        header {
+            text-align: center;
+            padding: 1rem;
+            background: rgb(120, 156, 229);
+            color: rgb(17, 17, 18);
+            border-bottom: 1px double black;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: rgb(8, 8, 8)
+        }
+
+        section {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: rgb(51, 3, 245);
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        ul li {
+            margin: 0.5rem;
+            font-size: 1rem;
+            color: black;
+        }
+
+        button {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: rgb(78, 135, 231);
+            color: white;
+        }
+
+        button:hover {
+            background: rgb(37, 100, 199);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 1rem;
+            background: white;
+        }
+
+        @media (max-width:768px) {
+            header h1 {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 1rem;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Kaviya M</h1>
+        <p>Frontend Developer | B.Tech CSE Graduate</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I'm currently learning full-stack frontend development and have completed my B.Tech in Computer Science and
+            Engineering. I'm passionate about clean design and creating user-friendly interfaces.</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <section class="Certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>SAP Global Certification</li>
+            <li>Programming Foundations with JavaScript, HTML & CSS</li>
+            <li>Web Applications Developed using Django</li>
+        </ul>
+    </section>
+
+    <section class="projects" id="projectSection">
+        <h2>Projects</h2>
+        <ul id="projectList">
+            <li><strong>Heart Rate and Body Temperature Monitoring System using IoT</strong> — A health monitoring
+                system that tracks patient vitals remotely using IoT sensors.</li>
+            <li><strong>Health Care System using Fingerprint</strong> — A secure system for managing health records
+                based on fingerprint authentication.</li>
+        </ul>
+        <button id="addProjectBtn">Add New Project</button>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>📧 kaviyamarimuthu05@gmail.com</p>
+        <p>📱 7539955919</p>
+        <a href="https://github.com/KaviyaM-2622/Front-End-Class-Assignments" target="_blank">GitHub</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kaviya M | All Rights Reserved</p>
+        <button id="changeColorBtn">Change Background</button>
+        <button id="changeTitleBtn">Change Title</button>
+    </footer>
+
+    <script>
+        
+        const title = document.querySelector('#title');
+        const changeTitleBtn = document.getElementById('changeTitleBtn');
+        changeTitleBtn.addEventListener('click', () => {
+            title.innerHTML = "✨ Kaviya M | Frontend Developer ✨";
+        });
+
+        const changeColorBtn = document.getElementById('changeColorBtn');
+        changeColorBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor =
+                document.body.style.backgroundColor === "rgb(182, 218, 227)" ? "rgb(240, 180, 180)" : "rgb(182, 218, 227)";
+        });
+
+        const addProjectBtn = document.getElementById('addProjectBtn');
+        const projectList = document.getElementById('projectList');
+
+        addProjectBtn.addEventListener('click', () => {
+            const newProject = document.createElement('li');
+            newProject.innerHTML = "<strong>Portfolio Enhancement Project</strong> — A JavaScript project to dynamically update webpage content.";
+            projectList.appendChild(newProject);
+            alert("New Project Added!");
+        });
+    </script>
+</body>
+</html>

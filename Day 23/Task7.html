@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Live Text Update</h2>
+  <input type="text" id="userInput" placeholder="Type something...">
+  <p id="outputText"></p>
+
+  <script>
+    const input = document.getElementById("userInput");
+    const output = document.getElementById("outputText");
+
+    input.addEventListener("input", function() {
+      output.textContent = input.value;
+    });
+  </script>
+</body>
+</html>

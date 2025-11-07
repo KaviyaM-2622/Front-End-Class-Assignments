@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Colors</title>
+</head>
+<body>
+  <h1>Click a Button to Change Background Color</h1>
+
+  <button id="blackBtn">black</button>
+  <button id="pinkBtn">pink</button>
+  <button id="blueBtn">Blue</button>
+  <button id="yellowBtn">Yellow</button>
+
+  <script>
+
+    let blackBtn = document.getElementById("blackBtn");
+    let pinkBtn = document.getElementById("pinkBtn");
+    let blueBtn = document.getElementById("blueBtn");
+    let yellowBtn = document.getElementById("yellowBtn");
+
+   
+    blackBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "black";
+    });
+
+    pinkBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "pink";
+    });
+
+    blueBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightblue";
+    });
+
+    yellowBtn.addEventListener("click", function() {
+      document.body.style.backgroundColor = "yellow";
+    });
+  </script>
+</body>
+</html>

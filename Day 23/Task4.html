@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="myList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Orange</li>
+  </ul>
+
+  <button onclick="removeFirstItem()">Remove First Item</button>
+
+  <script>
+    function removeFirstItem() {
+      let list = document.getElementById("myList");
+      let firstItem = list.firstElementChild; 
+      list.removeChild(firstItem); 
+    }
+  </script>
+</body>
+</html>

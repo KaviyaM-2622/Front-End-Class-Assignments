@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>innerHTML</title>
+</head>
+<body>
+  <h1>Using innerHTML</h1>
+
+  <button onclick="showMessage()">Show Message</button>
+
+  <div id="output"></div>
+
+  <script>
+    function showMessage() {
+      let outputDiv = document.getElementById("output");
+
+      outputDiv.innerHTML = "This is a <b>bold</b> and <i>italic</i> message!";
+    }
+  </script>
+</body>
+</html>
