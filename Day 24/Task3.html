@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Event</title>
+</head>
+<body>
+  <h2>Enter your name</h2>
+
+  <form id="myForm">
+    <input type="text" id="nameInput" placeholder="Type your name...">
+    <button type="submit">Submit</button>
+  </form>
+
+  <p>Your name is: <span id="displayName"></span></p>
+
+  <script>
+    const form = document.getElementById("myForm");
+    const nameInput = document.getElementById("nameInput");
+    const displayName = document.getElementById("displayName");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      displayName.textContent = nameInput.value; 
+    });
+  </script>
+</body>
+</html>

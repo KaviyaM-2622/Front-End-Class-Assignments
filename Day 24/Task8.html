@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Safe Calculator</title>
+</head>
+<body>
+  <h2>Safe Calculator</h2>
+
+  <form id="calcForm">
+    <label>Number 1:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Number 2:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button type="submit">Divide</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    const form = document.getElementById("calcForm");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+
+      try {
+        if (isNaN(num1) || isNaN(num2)) {
+          throw new Error("Please enter valid numbers.");
+        }
+        if (num2 === 0) {
+          throw new Error("Cannot divide by zero!");
+        }
+
+        const division = num1 / num2;
+        result.style.color = "green";
+        result.textContent = `Result: ${division}`;
+      } 
+      catch (error) {
+        result.style.color = "red";
+        result.textContent = `Error: ${error.message}`;
+      }
+    });
+  </script>
+</body>
+</html>

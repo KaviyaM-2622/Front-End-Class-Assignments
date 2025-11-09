@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live User Input</title>
+</head>
+<body>
+    <h2>Input Event</h2>
+    <input type="text" id="userInput" placeholder="Start typing...">
+    <p>input: <span id="displayText"></span></p>
+
+    <script>
+        const inputBox = document.getElementById("userInput");
+        const display = document.getElementById("displayText");
+
+        inputBox.addEventListener("input", function(){
+            display.textContent=inputBox.value;
+        });
+    </script>
+</body>
+</html>

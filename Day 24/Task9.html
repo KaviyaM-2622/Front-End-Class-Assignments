@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Color with Error Handling</title>
+</head>
+<body>
+  <h2 id="text">This text will change color</h2>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      try {
+        const element = document.getElementById("text");
+
+        if (!element) {
+          throw new Error("Element not found!");
+        }
+
+        const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        element.style.color = randomColor;
+      } 
+      catch (error) {
+        console.log("Error caught:", error.message);
+        alert("" + error.message);
+      }
+    }
+  </script>
+</body>
+</html>

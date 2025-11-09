@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Throw Error</title>
+</head>
+<body>
+  <h2>Throw Error</h2>
+
+  <script>
+    function checkNumber(num) {
+      if (num < 0) {
+        throw new Error("Number cannot be negative!");
+      }
+      return "Valid number: " + num;
+    }
+
+    try {
+      console.log(checkNumber(-5));
+    } 
+    catch (error) {
+      console.log("Error caught:", error.message);
+    }
+  </script>
+</body>
+</html>
