@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<title>GitHub Profile</title>
+<style>
+  body {
+    font-family: system-ui, Arial;
+    padding: 20px;
+  }
+
+  #profile {
+    margin-top: 12px;
+  }
+
+  .label {
+    color: #e62b2b;
+  }
+
+  .value {
+    font-weight: 700;
+  }
+</style>
+</head>
+
+<body>
+  <h1>GitHub profile information</h1>
+  <div id="profile">Loading...</div>
+
+  <script>
+    const username = 'KaviyaM-2622';
+
+    const profileEl = document.getElementById('profile');
+
+    fetch(`https://api.github.com/users/${encodeURIComponent(username)}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok: ' + response.status + ' ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const { login, public_repos } = data;
+
+        profileEl.innerHTML = `
+          <p><span class="label">Login:</span> <span class="value">${login ?? '—'}</span></p>
+          <p><span class="label">Public repos:</span> <span class="value">${public_repos ?? 0}</span></p>
+        `;
+      })
+      .catch(err => {
+        profileEl.textContent = 'Failed to load profile: ' + err.message;
+        console.error(err);
+      });
+  </script>
+</body>
+
+</html>

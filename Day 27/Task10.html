@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Followers</title>
+</head>
+<body>
+  <h2>GitHub Followers Viewer</h2>
+
+  <input type="text" id="username" placeholder="Enter GitHub username" value="KaviyaM-2622">
+  <button onclick="getFollowers()">Fetch Followers</button>
+
+  <p id="message"></p>
+  <div id="followers"></div>
+
+  <script>
+    async function getFollowers() {
+      const username = document.getElementById("username").value;
+      const followersDiv = document.getElementById("followers");
+      const message = document.getElementById("message");
+      
+      followersDiv.innerHTML = "";
+      message.textContent = "Loading...";
+
+      try {
+        const res = await fetch(`https://api.github.com/users/${username}/followers`);
+        if (!res.ok) throw new Error("User not found");
+        
+        const data = await res.json();
+        message.textContent = "";
+
+        if (data.length === 0) {
+          message.textContent = "No followers found.";
+          return;
+        }
+
+        data.forEach(follower => {
+          const div = document.createElement("div");
+          div.innerHTML = `
+            <img src="${follower.avatar_url}" width="50" height="50">
+            <a href="${follower.html_url}" target="_blank">${follower.login}</a>
+          `;
+          followersDiv.appendChild(div);
+        });
+      } catch (error) {
+        message.textContent = "Error: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
