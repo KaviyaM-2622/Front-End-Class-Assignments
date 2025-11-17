@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Time in SessionStorage</title>
+</head>
+<body>
+
+<h2>Current Time Logger</h2>
+
+<button onclick="saveTime()">Save Current Time</button>
+
+<p id="result"></p>
+
+<script>
+    function saveTime() {
+        const now = new Date().toLocaleTimeString();
+        console.log("Current Time:", now);
+        sessionStorage.setItem("sessionTime", now);
+        document.getElementById("result").innerText = 
+            "Saved Time: " + now;
+    }
+</script>
+
+</body>
+</html>

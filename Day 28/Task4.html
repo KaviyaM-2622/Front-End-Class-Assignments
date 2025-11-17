@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read JSON from localStorage</title>
+</head>
+<body>
+
+<h2>Read Saved Data</h2>
+
+<button onclick="readData()">Read & Log Data</button>
+
+<script>
+    const user = {
+        name: "Kaviya",
+        course: "Frontend"
+    };
+    localStorage.setItem("userData", JSON.stringify(user));
+    function readData() {
+        let saved = localStorage.getItem("userData");
+        let parsed = JSON.parse(saved);
+        console.log(parsed);
+        alert("Check the console!");
+    }
+</script>
+
+</body>
+</html>

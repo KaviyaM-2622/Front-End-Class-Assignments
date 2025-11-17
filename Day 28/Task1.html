@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Save Name & Course</h3>
+
+<input type="text" id="name" placeholder="Enter your name"><br><br>
+<input type="text" id="course" placeholder="Enter your course"><br><br>
+
+<button onclick="saveData()">Save</button>
+
+<h3>Retrieved Data:</h3>
+<p id="output"></p>
+
+<script>
+function saveData() {
+  const name = document.getElementById("name").value;
+  const course = document.getElementById("course").value;
+
+  localStorage.setItem("myName", name);
+  localStorage.setItem("myCourse", course);
+
+  showData();
+}
+
+function showData() {
+  const storedName = localStorage.getItem("myName");
+  const storedCourse = localStorage.getItem("myCourse");
+
+  if (storedName && storedCourse) {
+    document.getElementById("output").innerText =
+      "Name: " + storedName + " | Course: " + storedCourse;
+  }
+}
+
+window.onload = showData;
+</script>
+
+</body>
+</html>
+

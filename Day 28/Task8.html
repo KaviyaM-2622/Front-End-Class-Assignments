@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debug This Code Quiz</title>
+</head>
+<body>
+
+<h2>Debug This Code - Mini Quiz</h2>
+
+<p><b>Find the bug in this code:</b></p>
+
+<pre>
+// This code should print the sum of 5 and 10
+function add(a, b) {
+  return a + c;   // Bug here
+}
+
+console.log(add(5, 10));
+</pre>
+
+<p>Your answer:</p>
+<input id="answer" type="text" style="width:300px;">
+
+<button onclick="checkBug()">Check Answer</button>
+
+<p id="result"></p>
+
+<script>
+function checkBug() {
+  let userAnswer = document.getElementById("answer").value.toLowerCase();
+
+  if (userAnswer.includes("c") || userAnswer.includes("wrong variable")) {
+    document.getElementById("result").textContent =
+      "Correct! The function uses 'c' instead of 'b'.";
+  } else {
+    document.getElementById("result").textContent =
+      "Try again! Hint: Look at the variable names.";
+  }
+}
+</script>
+
+</body>
+</html>

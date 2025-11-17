@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Session Time</title>
+</head>
+<body>
+
+  <h2>Your Session Started At:</h2>
+  <p id="time"></p>
+
+  <script>
+    let sessionTime = new Date().toLocaleString();
+
+    if (!sessionStorage.getItem("sessionStartTime")) {
+      sessionStorage.setItem("sessionStartTime", sessionTime);
+    }
+
+    let storedTime = sessionStorage.getItem("sessionStartTime");
+
+    document.getElementById("time").textContent = storedTime;
+  </script>
+
+</body>
+</html>

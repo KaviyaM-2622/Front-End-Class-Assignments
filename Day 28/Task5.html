@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console Experiment</title>
+</head>
+<body>
+    <h2>Open DevTools and try console.log(), console.table(), and breakpoints</h2>
+
+    <script>
+        const students = [
+            { name: "Kaviya", age: 19, course: "Frontend" },
+            { name: "Divya", age: 20, course: "Backend" },
+            { name: "Iniya", age: 21, course: "Data Analytics" }
+        ];
+
+        console.log("Students array:");
+        console.log(students);   
+
+        console.table(students); 
+
+        function calculate(a, b) {
+            let sum = a + b;     
+            return sum;
+        }
+
+        let result = calculate(10, 20);
+        console.log("Result:", result);
+    </script>
+</body>
+</html>

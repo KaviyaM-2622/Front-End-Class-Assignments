@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Save Object to localStorage</title>
+</head>
+
+<body>
+
+    <h2>Save Object to localStorage</h2>
+    <button onclick="saveData()">Save Data</button>
+
+    <script>
+        function saveData() {
+            const user = {
+                name: "Kaviya",
+                course: "Frontend",
+                age: 24
+            };
+
+            const jsonData = JSON.stringify(user);
+
+            localStorage.setItem("userData", jsonData);
+
+            alert("Object saved in localStorage!");
+        }
+    </script>
+
+</body>
+</html>
