@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hide and Show</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#hideBtn").click(function () {
+                $("#myPara").hide();
+            });
+
+            $("#showBtn").click(function () {
+                $("#myPara").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p id="myPara">This is a paragraph that can be hidden or shown!</p>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+
+</body>
+</html>

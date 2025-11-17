@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info Card</title>
+  <style>
+    .card {
+      width: 280px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: Arial;
+    }
+
+    .card-header {
+      font-weight: bold;
+      cursor: pointer;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .card-content {
+      display: none; 
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header" id="toggleBtn">
+      Click to Expand / Collapse
+    </div>
+
+    <div class="card-content" id="contentBox">
+      <p>This is some simple information inside the card.</p>
+      <p>You can put any text you want here.</p>
+    </div>
+  </div>
+
+  <script>
+    let btn = document.getElementById("toggleBtn");
+    let box = document.getElementById("contentBox");
+
+    btn.addEventListener("click", function () {
+      if (box.style.display === "none") {
+        box.style.display = "block"; 
+      } else {
+        box.style.display = "none"; 
+      }
+    });
+  </script>
+
+</body>
+</html>

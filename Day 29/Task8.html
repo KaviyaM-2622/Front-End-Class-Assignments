@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slide Down Notification</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+    }
+
+    #notificationBox {
+      position: fixed;
+      top: -80px; 
+      left: 50%;
+      transform: translateX(-50%);
+      background: teal;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      opacity: 0;
+      transition: 0.4s ease;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    #closeBtn {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    button {
+      padding: 10px 18px;
+      font-size: 16px;
+      background: teal;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="showBtn">Show Notification</button>
+
+  <div id="notificationBox">
+    ✔ Task Completed!
+    <button id="closeBtn">×</button>
+  </div>
+
+  <script>
+    const btn = document.getElementById("showBtn");
+    const box = document.getElementById("notificationBox");
+    const closeBtn = document.getElementById("closeBtn");
+
+    btn.addEventListener("click", function () {
+      box.style.top = "10px";   
+      box.style.opacity = "1";  
+
+      setTimeout(() => {
+        hideNotification();
+      }, 3000);
+    });
+
+    function hideNotification() {
+      box.style.top = "-80px";  
+      box.style.opacity = "0";
+    }
+
+    closeBtn.addEventListener("click", hideNotification);
+  </script>
+
+</body>
+</html>

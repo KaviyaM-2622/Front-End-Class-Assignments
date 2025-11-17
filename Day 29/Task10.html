@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show/Hide Quiz</title>
+  <style>
+    #msg {
+      display: none;
+      background: lightyellow;
+      padding: 10px;
+      border: 1px solid orange;
+      margin-bottom: 15px;
+    }
+    .answer {
+      display: none;
+      background: #e0f7ff;
+      padding: 6px;
+      margin-top: 5px;
+      border-left: 3px solid #00aaff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Message Toggler</h2>
+
+  <button onclick="showMsg()">Show Message</button>
+  <button onclick="hideMsg()">Hide Message</button>
+  <button onclick="toggleMsg()">Toggle Message</button>
+
+  <div id="msg">This is a simple message box!</div>
+
+  <hr>
+
+  <h2>Mini Quiz</h2>
+
+  <p><b>1. Which language runs in the browser?</b></p>
+  <button onclick="showAnswer('a1')">Show Answer</button>
+
+  <div id="a1" class="answer">Answer: JavaScript</div>
+
+  <br><br>
+
+  <p><b>2. What does HTML stand for?</b></p>
+  <button onclick="showAnswer('a2')">Show Answer</button>
+
+  <div id="a2" class="answer">Answer: HyperText Markup Language</div>
+
+  <script>
+
+    function showMsg() {
+      document.getElementById("msg").style.display = "block";
+    }
+
+    function hideMsg() {
+      document.getElementById("msg").style.display = "none";
+    }
+
+    function toggleMsg() {
+      let box = document.getElementById("msg");
+      if (box.style.display === "none") {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    }
+
+    function showAnswer(id) {
+      let ans = document.getElementById(id);
+
+      if (ans.style.display === "none") {
+        ans.style.display = "block";
+      } else {
+        ans.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

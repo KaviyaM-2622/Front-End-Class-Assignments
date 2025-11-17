@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #box {
+            width: 200px;
+            padding: 20px;
+            background: lightblue;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+
+<button id="toggleBtn">Slide Toggle</button>
+
+<div id="box">
+    Hello! I will slide up and down.
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#toggleBtn").click(function () {
+            $("#box").slideToggle(); 
+        });
+    });
+</script>
+
+</body>
+</html>

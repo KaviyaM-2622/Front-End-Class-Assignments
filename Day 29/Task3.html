@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Image</title>
+</head>
+<body>
+
+    <button id="toggleBtn">Hide Image</button>
+
+    <br><br>
+
+    <img id="myImage" src="https://via.placeholder.com/200" alt="Sample Image" width="200">
+
+    <script>
+        const btn = document.getElementById("toggleBtn");
+        const img = document.getElementById("myImage");
+
+        btn.addEventListener("click", function () {
+            if (img.style.display === "none") {
+                img.style.display = "block";
+                btn.textContent = "Hide Image";
+            } else {
+                img.style.display = "none";
+                btn.textContent = "Show Image";
+            }
+        });
+    </script>
+
+</body>
+</html>

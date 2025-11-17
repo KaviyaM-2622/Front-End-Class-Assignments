@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #myText {
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="myText">This is the original text.</p>
+    <button id="changeBtn">Change Text & Color</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#changeBtn").click(function () {
+                $("#myText")
+                    .text("The text has been changed!")
+                    .css("color", "blue");
+            });
+        });
+    </script>
+
+</body>
+</html>
