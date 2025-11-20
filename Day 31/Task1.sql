@@ -7,5 +7,4 @@ Create table departments (
 
 select * from departments
 
-insert into departments (id, name , description)
-values ( 123 , 'kaviya', 'btech')
+

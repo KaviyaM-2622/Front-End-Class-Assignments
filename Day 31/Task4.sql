@@ -10,3 +10,6 @@ select * from departments
 insert into departments ( name , description)
 values ( 'kaviya', 'btech'),
 ('divya', 'mtech')
+
+alter table departments
+add phone int;
