@@ -21,3 +21,4 @@ values
 select first_name, salary from employees_1
 where salary > 75000;
 
+select * from employees_1
